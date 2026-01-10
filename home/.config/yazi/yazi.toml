@@ -1,0 +1,17 @@
+[mgr]
+show_hidden = true
+
+[opener]
+edit = [{ run = 'nvim "$@"', desc = "$EDITOR", block = true, for = "unix" }]
+
+onlyoffice = [
+  { run = 'GTK_IM_MODULE=fcitx onlyoffice-desktopeditors "$@"', orphan = true, desc = "用 OnlyOffice 打开" },
+]
+
+
+[open]
+prepend_rules = [
+  { name = "*.{ppt,docx,xlsx,pptx,odt,ods,odp,doc}", use = [
+    "onlyoffice",
+  ] },
+]

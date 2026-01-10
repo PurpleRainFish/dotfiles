@@ -1,0 +1,7 @@
+[mgr]
+prepend_keymap = [
+  { on = [
+    'g',
+    'p',
+  ], run = "cd ~/PurpleRainFish/", desc = "Cd to ~/PurpleRainFish" },
+]
