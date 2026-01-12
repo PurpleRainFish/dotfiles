@@ -13,8 +13,8 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt EXTENDED_HISTORY
 
-zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 
+zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 # autostart
 if [[ ... ]]; then
     fortune | cowsay -r | lolcat
@@ -26,7 +26,6 @@ fi
 # alias
 alias hyprc='nvim ~/.config/hypr/hyprland.conf'
 alias zshc='nvim ~/.zshrc'
-# alias cd='z'
 alias ls='eza -F -a'
 
 
