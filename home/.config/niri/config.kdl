@@ -83,7 +83,8 @@ output "DP-1" {
 }
 
 output "eDP-1" {
-    off
+    mode "2560x1600@240.002"
+    scale 1.333
 }
 
 /-output "eDP-1" {
@@ -634,7 +635,8 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
+    // Mod+Shift+E { quit; }
+    Mod+M { quit; }
     Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
