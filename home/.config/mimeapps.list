@@ -11,13 +11,15 @@ application/x-extension-xhtml=zen-browser.desktop
 application/x-extension-xht=zen-browser.desktop
 
 application/pdf=org.pwmt.zathura.desktop
-inode/directory=org.kde.dolphin.desktop;
+inode/directory=thunar.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;
+
 text/plain=nvim.desktop
 text/markdown=nvim.desktop
 
 image/png=org.kde.gwenview.desktop
 image/jpeg=org.kde.gwenview.desktop
+x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
 
 
 
@@ -34,8 +36,9 @@ application/x-extension-xhtml=zen-browser.desktop;
 application/x-extension-xht=zen-browser.desktop;
 
 application/pdf=org.pwmt.zathura.desktop;
-inode/directory=org.kde.dolphin.desktop;
+inode/directory=thunar.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;
+
 text/plain=nvim.desktop
 text/markdown=nvim.desktop
 

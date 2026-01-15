@@ -1,11 +1,14 @@
 
-bindkey -e
 
 # theme
 eval "$(starship init zsh)"
 
 # zoxide
 eval "$(zoxide init zsh)"
+
+# zsh-vi-mode
+bindkey -e
+# source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # history
 HISTFILE=~/.zsh_history
