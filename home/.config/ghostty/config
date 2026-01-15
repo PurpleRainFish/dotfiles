@@ -54,6 +54,6 @@ font-family = Maple Mono NF CN
 font-size = 14
 
 custom-shader-animation = always
-custom-shader = ./shaders/cursor_warp.glsl
+custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
 
 background-opacity = 0.9
