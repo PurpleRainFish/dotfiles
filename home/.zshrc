@@ -1,3 +1,6 @@
+
+bindkey -e
+
 # theme
 eval "$(starship init zsh)"
 
