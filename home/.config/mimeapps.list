@@ -19,6 +19,7 @@ text/markdown=nvim.desktop
 
 image/png=org.kde.gwenview.desktop
 image/jpeg=org.kde.gwenview.desktop
+
 x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
 
 
@@ -45,3 +46,4 @@ text/markdown=nvim.desktop
 image/png=org.kde.gwenview.desktop
 image/jpeg=org.kde.gwenview.desktop
 
+x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
