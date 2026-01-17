@@ -1,5 +1,4 @@
 
-
 # theme
 eval "$(starship init zsh)"
 
@@ -19,8 +18,8 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt EXTENDED_HISTORY
 
-
 zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
+
 # autostart
 if [[ ... ]]; then
     fortune | cowsay -r | lolcat
