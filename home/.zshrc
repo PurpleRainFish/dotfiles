@@ -31,8 +31,8 @@ fi
 # alias
 alias hyprc='nvim ~/.config/hypr/hyprland.conf'
 alias zshc='nvim ~/.zshrc'
-alias ls='eza -F -a'
-
+alias e='eza -F -a'
+alias downloading='systemd-inhibit --what=sleep:handle-lid-switch --who="fish" --why="Downloading" --mode=block sleep infinity'
 
 # plugins
 source <(fzf --zsh)
