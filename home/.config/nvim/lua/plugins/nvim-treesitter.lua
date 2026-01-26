@@ -14,6 +14,7 @@ return {
 			"jsonc",
 			"json",
 			"css",
+			"rust",
 		},
 		highlight = { enable = true },
 		indent = { enable = true },

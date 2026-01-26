@@ -13,6 +13,7 @@ application/x-extension-xht=zen-browser.desktop
 application/pdf=org.pwmt.zathura.desktop
 inode/directory=thunar.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=onlyoffice-desktopeditors.desktop;
 
 text/plain=nvim.desktop
 text/markdown=nvim.desktop
@@ -39,6 +40,7 @@ application/x-extension-xht=zen-browser.desktop;
 application/pdf=org.pwmt.zathura.desktop;
 inode/directory=thunar.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=onlyoffice-desktopeditors.desktop;
 
 text/plain=nvim.desktop
 text/markdown=nvim.desktop
