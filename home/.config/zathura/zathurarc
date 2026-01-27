@@ -2,5 +2,6 @@ map <C--> zoom out
 map <C-=> zoom in
 
 set guioptions 'cshv'
+set selection-clipboard clipboard
 
 

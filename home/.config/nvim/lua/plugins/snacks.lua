@@ -41,5 +41,10 @@ return {
 	},
 	opts = {
 		picker = {},
+		image = {
+			math = {
+				enabled = false,
+			},
+		},
 	},
 }
