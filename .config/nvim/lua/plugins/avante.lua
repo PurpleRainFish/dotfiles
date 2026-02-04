@@ -10,7 +10,7 @@ return {
 	-- -@module 'avante'
 	-- -@type avante.Config
 	opts = {
-		provider = "qianwen",
+		provider = "gemini",
 		providers = {
 			-- deepseek = {
 			-- __inherited_from = "openai",

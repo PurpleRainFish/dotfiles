@@ -4,6 +4,7 @@ eval "$(starship init zsh)"
 # zoxide
 eval "$(zoxide init zsh)"
 
+# keymaps
 bindkey -e
 
 # history
@@ -14,7 +15,6 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt EXTENDED_HISTORY
-
 zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 
 # autostart
@@ -34,7 +34,6 @@ source <(fzf --zsh)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh
-
 zstyle ':completion:*' menu select
 autoload -Uz compinit
 compinit
@@ -43,6 +42,5 @@ compinit
 [ -f /opt/miniforge/etc/profile.d/conda.sh ] && source /opt/miniforge/etc/profile.d/conda.sh
 eval "$(mamba shell hook --shell zsh)"
 
-if [ -f ~/.secrets ]; then
-  . ~/.secrets
-fi
+# secrets
+source ~/.secrets
