@@ -42,3 +42,7 @@ compinit
 # conda
 [ -f /opt/miniforge/etc/profile.d/conda.sh ] && source /opt/miniforge/etc/profile.d/conda.sh
 eval "$(mamba shell hook --shell zsh)"
+
+if [ -f ~/.secrets ]; then
+  . ~/.secrets
+fi
