@@ -1,13 +1,13 @@
 environment {
-    QT_QPA_PLATFORM "wayland"
-    EDITOR "nvim"
-    XMODIFIERS "@im=fcitx"
-    QT_QPA_PLATFORMTHEME "qt6ct"
-    LANG "zh_CN.UTF-8"
-    ELECTRON_OZONE_PLATFORM_HINT "auto"
     QT_AUTO_SCREEN_SCALE_FACTOR "1"
     LIBVA_DRIVER_NAME "nvidia"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    LANG "zh_CN.UTF-8"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    EDITOR "nvim"
+    XMODIFIERS "@im=fcitx"
+    QT_QPA_PLATFORM "wayland"
 }
 
 // This config is in the KDL format: https://kdl.dev
@@ -294,18 +294,18 @@ layout {
 // See the binds section below for more spawn examples.
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "xrdb" "~/.Xresources"
-spawn-at-startup "qs" "-c" "noctalia-shell"
+// spawn-at-startup "xrdb" "~/.Xresources"
+spawn-at-startup "gsettings" "get" "org.gnome.desktop.interface" "color-scheme" "'prefer-dark'"
+spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent"
 spawn-at-startup "flclash"
+spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "nm-applet"
 spawn-at-startup "fcitx5"
-spawn-at-startup "systemctl" "--user" "start" "hyprpolkitagent"
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store" 
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store"
 spawn-at-startup "copyq"
 spawn-at-startup "blueman-applet"
-spawn-at-startup "rclone" "mount" "OneDrive:" "~/OneDrive" "--vfs-cache-mode" "full"
-spawn-at-startup "gsettings" "get" "org.gnome.desktop.interface" "color-scheme" "'prefer-dark'"
+spawn-at-startup "sleep" "5" "&&" "rclone" "mount" "remote:" "~/OneDrive" "--vfs-cache-mode" "full"
 spawn-at-startup "hypridle"
 spawn-at-startup "ghostty"
 
@@ -363,7 +363,19 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="com.github.hluk.copyq"
     open-floating true
+}
+
+
+window-rule {
+    match app-id="com.github.hluk.copyq"
+    open-floating true
+}
+
+window-rule {
+   match app-id="steam" title="notificationtoasts_11_desktop" 
+   open-focused false
 }
 
 // Example: block out two password managers from screen capture.
@@ -402,6 +414,11 @@ binds {
     //
     // Most actions that you can bind here can also be invoked programmatically with
     // `niri msg action do-something`.
+
+    Mod+B {spawn "zen-browser";}
+    Mod+E {spawn "thunar";}
+    Mod+V {spawn "copyq" "toggle";}
+    
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
@@ -603,17 +620,17 @@ binds {
     // Mod+R { switch-preset-column-width-back; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    Alt+F { maximize-column; }
-    Alt+w { fullscreen-window; }
+    Alt+A { maximize-column; }
+    Alt+W { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Mod+Ctrl+F { expand-column-to-available-width; }
+    Alt+Ctrl+F { expand-column-to-available-width; }
 
     Alt+C { center-column; }
 
     // Center all fully visible columns on screen.
-    Mod+Ctrl+C { center-visible-columns; }
+    Alt+Ctrl+C { center-visible-columns; }
 
     // Finer width adjustments.
     // This command can also:
