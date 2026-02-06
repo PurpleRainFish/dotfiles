@@ -1,4 +1,4 @@
-map <C-minus> zoom out
-map <C-equal> zoom in
 set guioptions 'cshv'
 set selection-clipboard clipboard
+map [normal] <C--> zoom out
+map [normal] <C-=> zoom in
