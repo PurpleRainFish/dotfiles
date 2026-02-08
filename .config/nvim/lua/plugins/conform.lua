@@ -7,7 +7,6 @@ return {
 			python = { "ruff_format" },
 			json = { "prettier" },
 			jsonc = { "prettier" },
-			-- typst = { "prettypst" },
 			typst = { "typstyle" },
 			yaml = { "prettier" },
 			tex = { "tex-fmt" },

@@ -1,4 +1,74 @@
 set guioptions 'cshv'
 set selection-clipboard clipboard
-map [normal] <C--> zoom out
-map [normal] <C-=> zoom in
+map <C--> zoom out
+map <C-=> zoom in
+
+set default-bg              "rgba(30, 30, 46, 0.8)"
+set default-fg              "#cdd6f4"
+set recolor-lightcolor      "rgba(0,0,0,0)"
+set recolor-darkcolor       "#cdd6f4"
+
+set statusbar-bg            "#11111b"
+set statusbar-fg            "#cba6f7"
+set inputbar-bg             "#11111b"
+set inputbar-fg             "#cba6f7"
+
+set notification-bg         "#11111b"
+set notification-fg         "#cba6f7"
+set notification-error-bg   "#11111b"
+set notification-error-fg   "#f38ba8"
+set notification-warning-bg "#d6b9f9"
+set notification-warning-fg "#c8043a"
+
+set index-bg                "rgba(0,0,0,0)"
+set index-fg                "#cdd6f4"
+set index-active-bg         "#cba6f7"
+set index-active-fg         "#11111b"
+set highlight-color         "rgba(214, 185, 249, 0.5)"
+set highlight-active-color  "rgba(187, 138, 244, 0.5)"
+set highlight-fg            "#11111b"
+
+set completion-bg           "#11111b"
+set completion-fg           "#cba6f7"
+set completion-group-bg     "#11111b"
+set completion-group-fg     "#cba6f7"
+set completion-highlight-fg "#11111b"
+set completion-highlight-bg "#cba6f7"
+
+# set default-fg                rgba(202,211,245,1)
+# set default-bg                rgba(36,39,58,1)
+#
+# set completion-bg             rgba(54,58,79,1)
+# set completion-fg             rgba(202,211,245,1)
+# set completion-highlight-bg   rgba(198,160,246,1)
+# set completion-highlight-fg   rgba(36,39,58,1)
+# set completion-group-bg       rgba(30,32,48,1)
+# set completion-group-fg       rgba(202,211,245,1)
+#
+# set statusbar-fg              rgba(202,211,245,1)
+# set statusbar-bg              rgba(24,25,38,1)
+# set inputbar-fg               rgba(202,211,245,1)
+# set inputbar-bg               rgba(36,39,58,1)
+#
+# set notification-bg           rgba(36,39,58,1)
+# set notification-fg           rgba(202,211,245,1)
+# set notification-error-bg     rgba(36,39,58,1)
+# set notification-error-fg     rgba(237,135,150,1)
+# set notification-warning-bg   rgba(36,39,58,1)
+# set notification-warning-fg   rgba(238,212,159,1)
+#
+# set recolor                   "true"
+# set recolor-lightcolor        rgba(36,39,58,1)
+# set recolor-darkcolor         rgba(202,211,245,1)
+#
+# set index-fg                  rgba(202,211,245,1)
+# set index-bg                  rgba(36,39,58,1)
+# set index-active-fg           rgba(202,211,245,1)
+# set index-active-bg           rgba(54,58,79,1)
+#
+# set render-loading-bg         rgba(36,39,58,1)
+# set render-loading-fg         rgba(202,211,245,1)
+#
+# set highlight-color           rgba(147,154,183,0.3)
+# set highlight-fg              rgba(202,211,245,1)
+# set highlight-active-color    rgba(198,160,246,0.3)

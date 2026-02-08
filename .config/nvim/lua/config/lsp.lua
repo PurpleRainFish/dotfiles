@@ -1,11 +1,11 @@
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("pyright")
-vim.lsp.enable("tinymist")
-vim.lsp.enable("texlab")
-vim.lsp.enable("clangd")
-vim.lsp.enable("rust-analyzer")
-vim.lsp.enable("marksman")
-vim.lsp.enable("bashls")
+vim.lsp.enable("lua_ls") -- lua
+vim.lsp.enable("pyright") -- python
+vim.lsp.enable("tinymist") -- typst
+vim.lsp.enable("texlab") -- tex
+vim.lsp.enable("clangd") -- c
+vim.lsp.enable("rust-analyzer") -- rust
+vim.lsp.enable("marksman") -- markdown
+vim.lsp.enable("bashls") -- bash
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
