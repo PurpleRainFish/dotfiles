@@ -1,8 +1,16 @@
+
+# set
 set guioptions 'cshv'
 set selection-clipboard clipboard
+set font "Maple Mono NF CN"
+set synctex true
+set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
+
+# map
 map <C--> zoom out
 map <C-=> zoom in
 
+# theme
 set default-bg              "rgba(30, 30, 46, 0.8)"
 set default-fg              "#cdd6f4"
 set recolor-lightcolor      "rgba(0,0,0,0)"
