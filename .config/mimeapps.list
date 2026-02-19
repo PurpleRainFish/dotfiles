@@ -15,6 +15,7 @@ inode/directory=org.kde.dolphin.desktop
 
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;libreoffice-writer.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=onlyoffice-desktopeditors.desktop;libreoffice-calc.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=onlyoffice-desktopeditors.desktop;libreoffice-calc.desktop
 
 text/plain=nvim.desktop
 text/markdown=nvim.desktop
@@ -46,6 +47,7 @@ inode/directory=org.kde.dolphin.desktop
 
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=onlyoffice-desktopeditors.desktop;libreoffice-writer.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=onlyoffice-desktopeditors.desktop;libreoffice-calc.desktop
+application/vnd.openxmlformats-officedocument.presentationml.presentation=onlyoffice-desktopeditors.desktop;libreoffice-calc.desktop
 
 text/plain=nvim.desktop
 text/markdown=nvim.desktop
