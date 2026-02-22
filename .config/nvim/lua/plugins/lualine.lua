@@ -5,17 +5,22 @@ return {
 	opts = {
 		options = {
 			theme = "auto",
-			component_separators = { left = "", right = "" },
+			component_separators = { left = "", right = "" }, -- 分隔块的字符
 		},
 		sections = {
 			lualine_c = {
 				"filename",
 				"filesize",
-				"selectioncount",
-				"windows",
 				"lsp_status",
 			},
-			lualine_x = { "encoding", "filetype" },
+			lualine_x = {
+				{
+					require("noice").api.status.mode.get,
+					cond = require("noice").api.status.mode.has,
+				},
+				"encoding",
+				"filetype",
+			},
 		},
 	},
 }
