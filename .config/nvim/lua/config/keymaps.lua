@@ -66,3 +66,5 @@ vim.keymap.set("n", "<C-1>", "<cmd>tabnext 1<cr>")
 vim.keymap.set("n", "<C-2>", "<cmd>tabnext 2<cr>")
 vim.keymap.set("n", "<C-3>", "<cmd>tabnext 3<cr>")
 vim.keymap.set("n", "<C-4>", "<cmd>tabnext 4<cr>")
+
+vim.keymap.set("n", "<leader>tt", "<cmd>LspTinymistExportPdf<cr>")

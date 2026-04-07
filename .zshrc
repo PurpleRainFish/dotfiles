@@ -22,7 +22,6 @@ if [[ ... ]]; then
     fortune | cowsay -r | lolcat
 fi
 
-
 # alias
 alias hyprc='nvim ~/.config/hypr/hyprland.conf'
 alias zshc='nvim ~/.zshrc'
@@ -39,8 +38,8 @@ autoload -Uz compinit
 compinit
 
 # conda
-[ -f /opt/miniforge/etc/profile.d/conda.sh ] && source /opt/miniforge/etc/profile.d/conda.sh
-eval "$(mamba shell hook --shell zsh)"
+# [ -f /opt/miniforge/etc/profile.d/conda.sh ] && source /opt/miniforge/etc/profile.d/conda.sh
+# eval "$(mamba shell hook --shell zsh)"
 
 # secrets
 source ~/.secrets

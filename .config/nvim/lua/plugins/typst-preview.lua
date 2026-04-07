@@ -2,7 +2,7 @@ return {
 	"chomosuke/typst-preview.nvim",
 	keys = {
 		{
-			"<leader>pt",
+			"<leader>tp",
 			"<cmd>TypstPreview<cr>",
 			desc = "Typst Preview",
 		},

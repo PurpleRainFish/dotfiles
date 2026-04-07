@@ -14,7 +14,7 @@ return {
 			{ "<leader>o", group = "Overseer", icon = " " },
 			{ "<leader>-", icon = " " },
 			{ "<leader>e", icon = " " },
-			{ "<leader>t", icon = " " },
+			{ "<leader>t", group = "Typst", icon = " " },
 			{ "<leader>p", group = "Preview", icon = " " },
 		},
 		preset = "modern",
