@@ -28,6 +28,19 @@ alias zshc='nvim ~/.zshrc'
 alias e='eza -F -a'
 alias downloading='systemd-inhibit --what=sleep:handle-lid-switch --who="fish" --why="Downloading" --mode=block sleep infinity'
 
+# 寂静启动 GUI 应用的包装函数
+run() {
+    "$@" > /dev/null 2>&1 &!
+}
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
+}
+
 # plugins
 source <(fzf --zsh)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
