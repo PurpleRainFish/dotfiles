@@ -33,6 +33,7 @@ run() {
     "$@" > /dev/null 2>&1 &!
 }
 
+# yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
