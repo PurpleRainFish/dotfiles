@@ -14,18 +14,19 @@
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
-hl.monitor({
-	output = "DP-1",
-	mode = "2560x1440@165.00",
-	position = "auto",
-	scale = "1.25",
-})
 
 hl.monitor({
 	output = "eDP-1",
 	mode = "2560x1600@240.00",
 	position = "auto",
 	scale = "1.6",
+})
+
+hl.monitor({
+	output = "DP-1",
+	mode = "2560x1440@165.00",
+	position = "auto",
+	scale = "1.25",
 })
 
 ---------------------
@@ -57,8 +58,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	hl.exec_cmd("flclash")
 	hl.exec_cmd("qs -c noctalia-shell")
-	-- hl.exec_cmd("sleep 1 && " + terminal)
-	hl.exec_cmd(terminal)
+	hl.exec_cmd("sleep 1 && " .. terminal)
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("fcitx5")
 	hl.exec_cmd("wl-paste --type text --watch cliphist store && wl-paste --type image --watch cliphist store")
@@ -202,8 +202,8 @@ hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 1
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows", enabled = true, speed = 4.79, spring = "easy" })
-hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, spring = "easy", style = "popin 87%" })
+hl.animation({ leaf = "windows", enabled = true, speed = 4.79, bezier = "easeOutQuint" })
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 4.1, bezier = "easeOutQuint", style = "popin 87%" })
 hl.animation({ leaf = "windowsOut", enabled = true, speed = 1.49, bezier = "linear", style = "popin 87%" })
 hl.animation({ leaf = "fadeIn", enabled = true, speed = 1.73, bezier = "almostLinear" })
 hl.animation({ leaf = "fadeOut", enabled = true, speed = 1.46, bezier = "almostLinear" })
@@ -313,6 +313,7 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 local altMod = "ALT" -- Sets "Windows" key as main modifier
 
+-----
 hl.bind("PRINT", hl.dsp.exec_cmd("flameshot gui"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("copyq toggle"))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/switch_display.sh"))
@@ -320,6 +321,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + F9", hl.dsp.exec_cmd("obs-cmd recording toggle"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-browser"))
+-----
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
@@ -334,7 +336,10 @@ hl.bind(altMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(altMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(altMod .. " + P", hl.dsp.window.pseudo())
 -- hl.bind(altMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
--- hl.bind(altMod .. " + C", hl.dsp.centerwindows)
+hl.bind(altMod .. " + C", hl.dsp.window.center())
+hl.bind(altMod .. " + CTRL + T", hl.dsp.focus({ window = "tiled" }))
+hl.bind(altMod .. " + CTRL + F", hl.dsp.focus({ window = "floating" }))
+hl.bind(altMod .. " + W", hl.dsp.window.fullscreen())
 
 -- Move focus with mainMod + arrow keys
 hl.bind(altMod .. " + H", hl.dsp.focus({ direction = "left" }))
@@ -444,5 +449,11 @@ hl.window_rule({
 	match = { class = "hyprland-run" },
 
 	move = "20 monitor_h-120",
+	float = true,
+})
+
+hl.window_rule({
+	name = "float",
+	match = { class = "com.follow.clash" },
 	float = true,
 })
