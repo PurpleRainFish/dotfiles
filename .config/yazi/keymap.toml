@@ -8,4 +8,7 @@ prepend_keymap = [
     'g',
     'l',
   ], run = "cd ~/.local/", desc = "Cd to ~/.local/" },
+  { on = "<C-n>", run = 'shell -- dragon-drop -a -x -i -T "$@"' },
+{ on  = "y", run = [ 'shell -- for path in %s; do echo "file://$path"; done | wl-copy -t text/uri-list', "yank" ],
+  desc = "Yank selected files (copy) and send to system clipboard"},
 ]

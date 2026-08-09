@@ -64,7 +64,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("wl-paste --type text --watch cliphist store && wl-paste --type image --watch cliphist store")
 	hl.exec_cmd("copyq")
 	hl.exec_cmd("blueman-applet")
-	hl.exec_cmd("hypridle ")
+	hl.exec_cmd("hypridle")
 	hl.exec_cmd("sleep 5 && rclone mount remote: ~/OneDrive --vfs-cache-mode full")
 	hl.exec_cmd("~/.config/hypr/scripts/switch_display.sh")
 end)
@@ -320,7 +320,6 @@ hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/switch_displa
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-browser"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + F9", hl.dsp.exec_cmd("obs-cmd recording toggle"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-browser"))
 -----
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
@@ -375,12 +374,12 @@ hl.bind(altMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 -- Laptop multimedia keys for volume and LCD brightness
 hl.bind(
 	"XF86AudioRaiseVolume",
-	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"),
+	hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+"),
 	{ locked = true, repeating = true }
 )
 hl.bind(
 	"XF86AudioLowerVolume",
-	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"),
+	hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"),
 	{ locked = true, repeating = true }
 )
 hl.bind(
@@ -393,8 +392,8 @@ hl.bind(
 	hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"),
 	{ locked = true, repeating = true }
 )
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"), { locked = true, repeating = true })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 2%+"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 2%-"), { locked = true, repeating = true })
 
 -- Requires playerctl
 hl.bind("XF86AudioNext", hl.dsp.exec_cmd("playerctl next"), { locked = true })
@@ -453,7 +452,13 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "float",
+	name = "clash_float",
 	match = { class = "com.follow.clash" },
+	float = true,
+})
+
+hl.window_rule({
+	name = "copyq_float",
+	match = { class = "com.github.hluk.copyq" },
 	float = true,
 })
