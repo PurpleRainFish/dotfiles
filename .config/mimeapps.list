@@ -28,6 +28,7 @@ x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
 x-scheme-handler/readest=readest-handler.desktop
 application/epub+zip=readest-handler.desktop
 x-scheme-handler/chatbox=xyz.chatboxapp.app.desktop
+x-scheme-handler/lxmusic=lx-music-desktop.desktop
 
 
 

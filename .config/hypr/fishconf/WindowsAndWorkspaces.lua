@@ -44,16 +44,10 @@ hl.window_rule({
 	float = true,
 })
 
--- hl.window_rule({
--- 	name = "clash_float",
--- 	match = { class = "com.follow.clash" },
--- 	float = true,
--- })
-
 hl.window_rule({
 	name = "float-window",
 	match = {
-		class = "^(com.github.hluk.copyq|blueman-manager|fdm|Matplotlib|nm-connection-editor|com.follow.clash)$",
+		class = "com.github.hluk.copyq|blueman-manager|fdm|Matplotlib|nm-connection-editor|com.follow.clash",
 	},
 	float = true,
 })

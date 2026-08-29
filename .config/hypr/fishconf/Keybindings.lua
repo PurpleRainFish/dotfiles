@@ -34,11 +34,18 @@ hl.bind(altMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(altMod .. " + K", hl.dsp.focus({ direction = "up" }))
 hl.bind(altMod .. " + J", hl.dsp.focus({ direction = "down" }))
 
+-- Move acttive window
+hl.bind(altMod .. " + SHIFT + " .. "H", hl.dsp.window.move({ direction = "l" }))
+hl.bind(altMod .. " + SHIFT + " .. "J", hl.dsp.window.move({ direction = "d" }))
+hl.bind(altMod .. " + SHIFT + " .. "K", hl.dsp.window.move({ direction = "u" }))
+hl.bind(altMod .. " + SHIFT + " .. "L", hl.dsp.window.move({ direction = "r" }))
+
 -- scorlling
 hl.bind(altMod .. " + R", hl.dsp.layout("colresize +conf"))
 hl.bind(altMod .. " + comma", hl.dsp.layout("swapcol l"))
 hl.bind(altMod .. " + period", hl.dsp.layout("swapcol r"))
 --
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
