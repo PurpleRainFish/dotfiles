@@ -52,38 +52,29 @@ hl.window_rule({
 	float = true,
 })
 
--- windowrule {
---     name = float-wechat
---     match:class = ^wechat$
---     match:title = ^(图片和视频)$
---     float = yes
--- }
---
---
--- windowrule {
---     name = float-qq
---     match:class = ^QQ$
---     match:title = ^(图片查看器)$
---     float = yes
--- }
---
--- windowrule {
---     name = float-flameshot-pin
---     match:class = ^flameshot$
---     match:title = ^(flameshot-pin)$
---     float = yes
--- }
---
--- windowrule {
---     name = float-qBittorrent
---     match:class = ^org.qbittorrent.qBittorrent$
---     match:title = ^(磁力链接)$
---     float = yes
--- }
---
--- windowrule {
---     name = float-zotero
---     match:class = ^Zotero$
---     match:title = ^(进度)$
---     float = yes
--- }
+hl.window_rule({
+	name = "float-qBittorrent",
+	match = {
+		class = "org.qbittorrent.qBittorrent",
+		title = "磁力链接",
+	},
+	float = true,
+})
+
+hl.window_rule({
+	name = "float-wechat",
+	match = {
+		class = "wechat",
+		title = "图片和视频",
+	},
+	float = true,
+})
+
+hl.window_rule({
+	name = "float-flameshot-pin",
+	match = {
+		class = "flameshot",
+		title = "flameshot-pin",
+	},
+	float = true,
+})
