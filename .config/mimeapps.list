@@ -20,8 +20,11 @@ application/vnd.openxmlformats-officedocument.presentationml.presentation=onlyof
 text/plain=nvim.desktop
 text/markdown=nvim.desktop
 
-image/png=org.nomacs.ImageLounge.desktop
-image/jpeg=org.nomacs.ImageLounge.desktop
+; image/png=org.nomacs.ImageLounge.desktop
+; image/jpeg=org.nomacs.ImageLounge.desktop
+
+image/png=org.kde.gwenview.desktop
+image/jpeg=org.kde.gwenview.desktop
 
 x-scheme-handler/fdm=freedownloadmanager_fdm_up.desktop
 
@@ -29,6 +32,9 @@ x-scheme-handler/readest=readest-handler.desktop
 application/epub+zip=readest-handler.desktop
 x-scheme-handler/chatbox=xyz.chatboxapp.app.desktop
 x-scheme-handler/lxmusic=lx-music-desktop.desktop
+x-scheme-handler/clash=flclash-url-handler.desktop
+x-scheme-handler/clashmeta=flclash-url-handler.desktop
+x-scheme-handler/flclash=flclash-url-handler.desktop
 
 
 
