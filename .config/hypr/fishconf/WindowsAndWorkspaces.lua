@@ -78,3 +78,12 @@ hl.window_rule({
 	},
 	float = true,
 })
+
+hl.window_rule({
+	name = "float-dolphin",
+	match = {
+		class = "org.kde.dolphin",
+		initial_title = "(正在删除 — Dolphin)|(正在复制 — Dolphin)",
+	},
+	float = true,
+})

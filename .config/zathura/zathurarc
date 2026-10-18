@@ -1,7 +1,7 @@
 
 # set
-set guioptions 'cshv'
-set selection-clipboard clipboard
+set guioptions 'shv'
+et selection-clipboard clipboard
 set font "Maple Mono NF CN"
 # set synctex true
 # set synctex-editor-command "nvr --remote-silent +%{line} %{input}"
