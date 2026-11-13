@@ -26,6 +26,7 @@ fi
 alias hyprc='nvim ~/.config/hypr/hyprland.conf'
 alias zshc='nvim ~/.zshrc'
 alias e='eza -F -a'
+alias el='eza -F -a -l'
 alias downloading='systemd-inhibit --what=sleep:handle-lid-switch --who="fish" --why="Downloading" --mode=block sleep infinity'
 
 # 寂静启动 GUI 应用的包装函数

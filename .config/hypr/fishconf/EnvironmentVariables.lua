@@ -4,14 +4,14 @@
 hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1") -- enables automatic scaling, based on the monitor’s pixel density
 hl.env("QT_QPA_PLATFORM", "wayland;xcb") -- Tell Qt applications to use the Wayland backend, and fall back to X11 if Wayland is unavailable
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
-hl.env("QT_IM_MODULES", "wayland;fcitx")
 hl.env("QT_IM_MODULE", "fcitx")
+hl.env("QT_IM_MODULES", "wayland;fcitx")
 
 -- GTK
 hl.env("GDK_BACKEND", "wayland,x11,*") -- GTK: Use Wayland if available; if not, try X11 and then any other GDK backend.
 
 -- cursor
-hl.env("XCURSOR_SIZE", "24")
+hl.env("XCURSOR_SIZE", "32")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_THEME", "catppuccin-macchiato-mauve-cursors")
 
@@ -33,3 +33,5 @@ hl.env("XMODIFIERS", "@im=fcitx")
 
 -- dolphin
 hl.env("XDG_MENU_PREFIX", "arch-")
+
+-- hl.env("__GL_THREADED_OPTIMIZATIONS", "0")

@@ -41,6 +41,7 @@ hl.bind(altMod .. " + SHIFT + " .. "K", hl.dsp.window.move({ direction = "u" }))
 hl.bind(altMod .. " + SHIFT + " .. "L", hl.dsp.window.move({ direction = "r" }))
 
 -- scorlling
+hl.bind(altMod .. " + E", hl.dsp.layout("colresize -conf"))
 hl.bind(altMod .. " + R", hl.dsp.layout("colresize +conf"))
 hl.bind(altMod .. " + comma", hl.dsp.layout("swapcol l"))
 hl.bind(altMod .. " + period", hl.dsp.layout("swapcol r"))
