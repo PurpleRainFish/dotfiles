@@ -1,6 +1,6 @@
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
-local altMod = "ALT" -- Sets "Windows" key as main modifier
 
+local altMod = "ALT" -- Sets "Windows" key as main modifier
 -----
 hl.bind("PRINT", hl.dsp.exec_cmd("flameshot gui"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("copyq toggle"))
